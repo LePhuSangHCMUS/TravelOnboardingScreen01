@@ -2,7 +2,7 @@
 import * as React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View} from "react-native"
+import { View,NativeModules} from "react-native"
 //Screen
 import {
   OnBoarding
@@ -40,7 +40,8 @@ const networkDebugger = () => {
  }
  }
 const Stack = createNativeStackNavigator();
-__DEV__?networkDebugger():null
+// __DEV__?networkDebugger():null
+// NativeModules.DevMenu.show();
 
 const App = () => {
   return <NavigationContainer>
